@@ -40,11 +40,12 @@ def estimate_loss(element):
     return out
 
 if __name__ == '__main__':
-    for element, step in enumerate(train_data.data_loader):
+    for step, element in enumerate(train_data.data_loader):
+        """
         if step % 100 == 0:
             losses = estimate_loss()
             print(f"step {step} train loss: {losses}, val loss: {losses}")
-
+            """
         xb, yb = element #given 256 predict the next 32 so do something here idk
 
         logits, loss = model(xb, yb) #TODO change this
