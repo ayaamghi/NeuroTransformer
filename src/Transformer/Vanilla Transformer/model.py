@@ -19,7 +19,7 @@ elif torch.backends.mps.is_available():
     device = torch.device('mps')
 else :
     device = torch.device('cpu')
-n_embd = 384 #TODO figure this out
+n_embd = 384 #left at 384 although this doesn't make a whole lot of sense here
 n_head = 6
 n_layer = 6
 dropout = 0.2
@@ -28,12 +28,8 @@ dropout = 0.2
 torch.manual_seed(1337)
 
 
-#TODO fix this
-#vocab_size = len(chars)
-vocab_size = None
-# create a mapping from characters to integers
-encode = None
-decode = None
+#arb vocab_size
+vocab_size = 2000
 
 
 
@@ -150,7 +146,7 @@ class GPTLanguageModel(nn.Module):
             B, T, C = logits.shape #TODO check shape
             logits = logits.view(B*T, C)
             targets = targets.view(B*T)
-            loss = F.cross_entropy(logits, targets) #TODO change error
+            loss = F.l1_loss(logits, targets) #l1 is MAE
 
         return logits, loss
 
