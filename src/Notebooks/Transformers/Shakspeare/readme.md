@@ -1,0 +1,2 @@
+This directory serves to follow along Andrej Karpathys video [Let's build GPT: from scratch, in code, spelled out](https://www.youtube.com/watch?v=kCc8FmEb1nY),
+with additional notes and modifications to make his code easier to follow given less experience with Python. 
