@@ -1,7 +1,5 @@
 from model import GPTLanguageModel
-import grain.python as grain
-
-from src.Transformer.Data import Split
+from Data import Split
 import torch
 
 
