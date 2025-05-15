@@ -3,7 +3,6 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-from src.Notebooks.Transformers.Shakspeare.data import vocab_size
 
 #karpathy took 15 min on h100 to train
 #run on texas a100 sxm4 instance on vast.ai ~12 minutes ~$.21

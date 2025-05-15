@@ -1,7 +1,6 @@
 from model import GPTLanguageModel
 import grain.python as grain
 
-from src.Notebooks.Transformers.Shakspeare.data import eval_interval
 from src.Transformer.Data import Split
 import torch
 
