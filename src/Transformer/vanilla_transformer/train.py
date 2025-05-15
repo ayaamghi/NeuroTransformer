@@ -20,7 +20,7 @@ batch_size = 64
 
 train_data = Split('train', 'long',batch_size)
 
-val_data = Split('val', 'long',batch_size)
+#val_data = Split('val', 'long',batch_size)
 
 model = GPTLanguageModel()
 model = model.to(device)
